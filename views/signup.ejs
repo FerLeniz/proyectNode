@@ -1,0 +1,46 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/header.ejs') %>
+<div class="row imgForm">
+    <div class='col-sm-12 col-md-7'>
+        <div class=' d-flex justify-content-center align-items-center flex-column mt-5'>
+            <div class="text-center ">
+                <h1 class=''>SIGN UP</h1>
+                <h3>Enter to your account... or</h3>
+                <h4>
+                    Don't have an account?
+                    <a href="/signin" class="fw-bold text-decoration-none text-dark fs-bold">
+                        Sign In here!
+                    </a>
+                </h4>
+                <form action='/signup' method="POST" class="my-4 d-flex justify-content-center flex-column">
+                    <input class=" fs-4 rounded-pill shadow border border-light noOtuline my-2" type="text" placeholder="Name"
+                        id="name" name="name" required />
+                    <input class=" fs-4 rounded-pill shadow border border-light noOtuline my-2" type="text"
+                        placeholder="Lastname" id="lastname" name="lastname" required />
+                    <input class=" fs-4 rounded-pill shadow border border-light noOtuline my-2" type="number" placeholder="Age"
+                        id="age" name="age" required />
+                    <input class=" fs-4 rounded-pill shadow border border-light noOtuline my-2" type="text" placeholder="Email"
+                        id="email" name="email" required />
+                    <input type="password" class=" fs-4 rounded-pill shadow border border-light noOtuline my-2"
+                        placeholder="Password" name="password" required />
+                    <div class="d-flex justify-content-center mt-2">
+                        <input type="submit" value='Sign Up' class='viewMore rounded-pill w-25 fs-4 text-center py-2 '>
+                    </div>
+                </form>
+    
+            </div>
+        </div>
+    </div>
+    <div class='col-sm-12 col-md-5 d-flex justify-content-center align-items-start flex-column'>
+        <div class="my-2 text-center">
+            <% if(error) { %>
+                <% error.forEach(err=>{ %>
+                     <p class='text-white bg-danger rounded '>- <%= err.message %> </p>
+                 <% }) %>
+                 <% console.log('antes del error ') %>
+                 <% console.log(error[0].message) %>
+             <% } %>
+        </div>
+    </div>    
+</div>
+<%- include('partials/footer.ejs') %>

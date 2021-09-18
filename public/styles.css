@@ -1,0 +1,100 @@
+body {
+   background-color: #FBB117; 
+  /* font-family: 'Amatic SC', cursive; */
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.texto {
+  background-color: yellow
+}
+
+.photo {
+  width: 80vw;
+  height: 36vw;
+  margin: 2vw;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+
+.photoCartel {
+  width: 45vw;
+  height: 34vw;
+  margin: 2vw;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+
+.divComments {
+  height: 62vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.inputComments {
+  outline: none;
+  font-size: 1.3rem;
+  border-radius: 0.8rem;
+  border: 0.15rem solid #165FFA
+}
+
+.iconSvg {
+  font-size: 2.5rem;
+  color: #165FFA
+}
+
+
+
+.titleImg {
+  background-color: rgba(22, 95, 250, 0.5);
+}
+
+.cursor {
+  cursor: pointer !important;
+}
+
+.noOtuline {
+  outline: none !important;
+}
+
+.imgForm {
+  background-image: linear-gradient(rgba(221, 221, 221, 0.5), rgba(163, 153, 153, 0.5)), url('https://th.bing.com/th/id/R.9d6b7fdcf323f119628cdb25857b9196?rik=%2bvanaX3pRQ9Pyw&riu=http%3a%2f%2fembassybar.com.au%2fwp-content%2fuploads%2f2017%2f05%2fcropped-Web-Header.jpg&ehk=kaxv3sKZdERIF90QKOqvyDEwMlhFpSxykakE5Q%2bPyXc%3d&risl=&pid=ImgRaw&r=0');
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.viewMore {
+  background-color: #165FFA;
+  outline: none !important;
+  border: none;
+  /* border-radius: 10px 100px / 120px!important; */
+  /* box-shadow: 5px 5px 5px #41658a; */
+  text-shadow: 0.1rem 0.1rem #f9fbfd;
+  color: #030303 !important
+}
+
+.sendButton {
+  font-size: 1.5rem;
+  border-radius: 25px;
+  background-color: #165FFA;
+  outline: none !important;
+  border: none;
+  text-shadow: 0.1rem 0.1rem #f9fbfd;
+  color: #030303 !important
+}
+
+.errorPage {
+  width: 97vw;
+  height: 42vw;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+}

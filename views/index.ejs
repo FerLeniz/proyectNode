@@ -1,0 +1,83 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/header.ejs') %>
+<h1 class="text-center mt-4">Welcome to Antares</h1>
+<h2 class="text-center">Give us your opinion about the best bar in Argentina</h2>
+<div class='d-flex justify-content-center'>
+    <div id="carouselExampleCaptions" class="carousel slide w-75" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- <img src="/assets/hormiganegra.jpg" class="d-block w-100" alt="..." /> -->
+                <div class='photo' style="background-image: url(/assets/antares.jpeg);">
+                    <div class="carousel-caption d-none d-md-block">
+                        <span class='py-2 px-2 rounded-pill titleImg'>Bar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="/assets/cervelar.jfif" class="d-block w-100" alt="..." /> -->
+                <div class='photo' style="background-image: url(/assets/botellon.jpg);">
+                    <div class="carousel-caption d-none d-md-block">
+                        <span class='py-2 px-2 rounded-pill titleImg'>Botellon</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="/assets/antares.jpg" class="d-block w-100" alt="..." /> -->
+                <div class='photo' style="background-image: url(/assets/fabrica.jfif);">
+                    <div class="carousel-caption d-none d-md-block">
+                        <span class='py-2 px-2 rounded-pill titleImg'>fabric</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<div class="row mt-5 mb-4">
+    <h3 class='text-center  '>"Nothing ever tasted better than a cold beer on a beautiful afternoon with nothing
+        to look forward to than more of the same."</h3>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class='col-sm-12 col-md-6 photoCartel' style="background-image: url(/assets/cheers.jfif);"></div>
+        <div class='col-sm-12 col-md-6 photoCartel' style="background-image: url(/assets/berPistols.jpg);">
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="text-center ">
+        <h3>The Oldest Bar in the World</h3>
+        <h4>Sean’s Bar – Athlone Ireland-900 AD</h4>
+    </div>
+    <div class="d-flex justify-content-center ">
+        <div class="photoCartel" style="background-image: url(/assets/seansBar.jpg);"></div>
+    </div>
+    <div class="d-flex justify-content-center my-5 ">
+        <div class='text-center bg-light w-75 py-3 rounded'>
+            <p class='px-3'>The small town of Athlone, serving about 20,000 people in almost the dead-center of Ireland,
+                is
+                ancient, so it’s no wonder it hosts a bar as old as this.</p>
+            <p class='px-3'>Today the pub greets visitors and locals with a pint and live music. Some of the artifacts
+                found in
+                the place—along with their certificate from Guinness legitimizing their story—is found hanging on
+                the wall with scores of other bric-a-brac.</p>
+        </div>
+    </div>
+
+</div>
+<%- include('partials/footer.ejs') %>
