@@ -12,6 +12,10 @@ const contentControllers = {
         })
     },
     reviews: async (req, res) => {
+        if(!req.session.loggedUser){
+            res.redirect("/error")
+        }
+
         const comments = await Comment.find()
         res.render('reviews', {
             title: 'Reviews',
@@ -29,7 +33,6 @@ const contentControllers = {
         let newComment;
         
             if(!_id){
-                console.log('caigo en IFF de req.query')
                 newComment = new Comment({
                    comment,
                    userId: req.session.userId,
@@ -39,21 +42,15 @@ const contentControllers = {
                })
              }else{
                 newComment = await Comment.findOne({_id})
-                 console.log(newComment)
-                 newComment.comment=comment,
-                 console.log('caigo en else de req.query')
+                 newComment.comment=comment
              }
         
 
         try {
             newComment.save()
             res.redirect('/reviews')
-            console.log('caigo en try de addcommment')
         } catch (err) {
-            console.log(err)
-            console.log(req.query)
             let comments = await Comment.find()
-            console.log('caigo en catch de addcommment')
             res.render('reviews', {
                 title: 'Reviews',
                 comments,
@@ -85,7 +82,6 @@ const contentControllers = {
         const idComment = req.params._id
 
         try {
-            console.log('caigo en tryyyy')
             let commentActual = await Comment.findOne({
                 _id: idComment
             })
@@ -101,7 +97,6 @@ const contentControllers = {
                 userId: req.session.userId
             })
         } catch (err) {
-            console.log('caigo en catchhhh')
             res.render('reviews', {
                 title: 'Reviews',
                 error: err,

@@ -23,7 +23,7 @@ body {
   width: 45vw;
   height: 34vw;
   margin: 2vw;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
@@ -97,4 +97,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
+}
+
+.parallax{
+
 }

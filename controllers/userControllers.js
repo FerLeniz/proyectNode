@@ -3,7 +3,6 @@ const bcryptjs = require("bcryptjs")
 
 const userControllers = {
     signin: (req, res) => {
-        console.log(req.session.loggedUser)
         if(req.session.loggedUser){
             res.redirect("/error")
         }
@@ -92,7 +91,6 @@ const userControllers = {
                 req.session.userId = existenceUser._id
                 req.session.name = existenceUser.name
                 req.session.age = existenceUser.age
-                console.log(req.session)
                 return res.redirect("/")
             } else {
                 res.render("signin", {
