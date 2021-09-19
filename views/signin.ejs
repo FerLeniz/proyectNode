@@ -2,34 +2,40 @@
 <%- include('partials/header.ejs') %>
 
         <div class="row">
-            <div class='imgForm d-flex justify-content-center align-items-center'>
-                <div class="text-center">
-                    <h1 class=''>SIGN IN</h1>
-                    <h3>Enter to your account... or</h3>
-                    <h4>
-                        Don't have an account?
-                        <a href="/signup" class="fw-bold text-decoration-none text-dark fs-bold">
-                        Sign up here!
-                        </a>
-                    </h4>
+            <div class='col-sm-12 col-md-7'>
+                <div class='imgForm d-flex justify-content-center align-items-center'>
+                    <div class="text-center">
+                        <h1 class=''>SIGN IN</h1>
+                        <h3>Enter to your account... or</h3>
+                        <h4>
+                            Don't have an account?
+                            <a href="/signup" class="fw-bold text-decoration-none text-dark fs-bold">
+                            Sign up here!
+                            </a>
+                        </h4>
+                        
+                        <form action='/signin' method='POST' class=" my-4 d-flex justify-content-center flex-column ">
+                            <div class="my-1">
+                                <input class=" fs-4 rounded-pill shadow border border-light noOtuline" type="text"
+                                    placeholder="Email" id="email" name="email" required/>
+                            </div>
+                            <div class="my-1">
+                                <input type="password" class=" fs-4 rounded-pill shadow border border-light noOtuline"
+                                    placeholder="Password" name="password" required/>
+                            </div>
+                            <div class="d-flex justify-content-center mt-2">
+                                <input type="submit" value='Sign In' class='viewMore rounded-pill w-25 fs-4 text-center '>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-12 col-md-5 d-flex justify-content-center align-items-start flex-column'>
+                <div class="my-2 text-center">
                     <% if(error){ %>
                         <small class='text-white bg-danger py-2 px-2 '><%= error %></small>
                     <% } %>
-                    <form action='/signin' method='POST' class=" my-4 d-flex justify-content-center flex-column ">
-                        <div class="my-1">
-                            <input class=" fs-4 rounded-pill shadow border border-light noOtuline" type="text"
-                                placeholder="Email" id="email" name="email" required/>
-                        </div>
-                        <div class="my-1">
-                            <input type="password" class=" fs-4 rounded-pill shadow border border-light noOtuline"
-                                placeholder="Password" name="password" required/>
-                        </div>
-                        <div class="d-flex justify-content-center mt-2">
-                            <input type="submit" value='Sign In' class='viewMore rounded-pill w-25 fs-4 text-center '>
-                        </div>
-                    </form>
                 </div>
-
             </div>
         </div>
 <%- include('partials/footer.ejs') %>
