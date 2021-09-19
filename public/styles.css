@@ -1,13 +1,21 @@
 body {
-   background-color: #FBB117; 
+   /* background: rgba(239,201,53,0.33) url("https://wallup.net/wp-content/uploads/2017/11/10/333568-simple-dark-simple_background-texture-black_background.jpg") repeat scroll 100% 0%; */
+   background: rgba(239,201,53,0.33) url("https://th.bing.com/th/id/R.e685c5bc18fbe931c26c5fd9875d4eac?rik=ECUh6P0os6Bt1g&riu=http%3a%2f%2fjornalismocolaborativo.com%2fwp-content%2fuploads%2f2014%2f06%2fbeer-texture.jpg&ehk=ih7IOsloTu16KI9o1xoNgorXmxBph8ECzYyd1TO4H3o%3d&risl=&pid=ImgRaw&r=0") repeat scroll 100% 0%;
+   /* background-color: #FBB117;  */
   /* font-family: 'Amatic SC', cursive; */
   font-family: 'Amatic SC', cursive;
   font-family: 'Permanent Marker', cursive;
+  /* color: #FBB117;  */
 }
 
-.texto {
-  background-color: yellow
+.darkMode{
+  background: rgba(239,201,53,0.33) url("https://wallup.net/wp-content/uploads/2017/11/10/333568-simple-dark-simple_background-texture-black_background.jpg") repeat scroll 100% 0%;  
+  color: #FBB117;
 }
+
+/* .texto {
+  color: #FBB117; 
+} */
 
 .photo {
   width: 80vw;
@@ -50,7 +58,7 @@ body {
 
 
 .titleImg {
-  background-color: rgba(22, 95, 250, 0.5);
+  background-color: rgba(22, 94, 250, 0.212);
 }
 
 .cursor {

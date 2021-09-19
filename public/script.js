@@ -1,15 +1,12 @@
-var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-var alertTrigger = document.getElementById('liveAlertBtn')
-
-function alert(message, type) {
-  var wrapper = document.createElement('div')
-  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-
-  alertPlaceholder.append(wrapper)
-}
-
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', function () {
-    alert('Nice, you triggered this alert message!', 'success')
-  })
+function changeMode() {
+  let status=document.getElementById('statusButton')
+  console.log(status.textContent)
+  if(status.textContent == 'Off'){
+    status.textContent ='On'
+    console.log('cae en if')
+  }else{
+    status.textContent ='Off'
+  }
+  var element = document.body;
+  element.classList.toggle("darkMode");
 }
