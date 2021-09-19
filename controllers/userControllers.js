@@ -65,9 +65,9 @@ const userControllers = {
                 })
                 await newUser.save()
                 req.session.loggedUser = true
-                req.session.userId = existenceUser._id
-                req.session.name = existenceUser.name
-                req.session.age = existenceUser.age
+                req.session.userId = newUser._id
+                req.session.name = newUser.name
+                req.session.age = newUser.age
                 return res.redirect("/")
             }
         } catch (err) {
