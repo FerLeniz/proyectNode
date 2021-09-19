@@ -1,7 +1,7 @@
 <% let variable= loggedUser? true : false %>
 
 <header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand">antares</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -9,37 +9,40 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse row" id="navbarNav">
-                    <div class='col-md-9'>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link <%= title.includes('Home')? 'active' : null %>" aria-current="page" href="/">Home</a>
-                            </li>
-                            <% if (!variable) { %>
-                            <li class="nav-item">
-                                <a class="nav-link <%= title.includes('In')? 'active' : null %>" href="/signin">Sign In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link <%= title.includes('Up')? 'active' : null %>" href="/signup">Sign Up</a>
-                            </li>
-                            <% }else{ %>
-                                <li class="nav-item">
-                                    <a class="nav-link <%= title.includes('Reviews')? 'active' : null %>" href="/reviews">Reviews</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link <%= title.includes('Out')? 'active' : null %>" href="/logout">Log out</a>
-                            </li>
-                            <%} %>
-                            
-                        </ul>
-                    </div>
-                    <div class='col-md-3 tetx-center'>
+                <div class='col-md-9'>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link <%= title.includes('Home')? 'active' : null %>" aria-current="page"
+                                href="/">Home</a>
+                        </li>
+                        <% if (!variable) { %>
+                        <li class="nav-item">
+                            <a class="nav-link <%= title.includes('In')? 'active' : null %>" href="/signin">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= title.includes('Up')? 'active' : null %>" href="/signup">Sign Up</a>
+                        </li>
+                        <% }else{ %>
+                        <li class="nav-item">
+                            <a class="nav-link <%= title.includes('Reviews')? 'active' : null %>"
+                                href="/reviews">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= title.includes('Out')? 'active' : null %>" href="/logout">Log out</a>
+                        </li>
+                        <%} %>
+
+                    </ul>
+                </div>
+                <div class='col-md-3 text-center'>
+                    <div class='d-md-none d-lg-block'>
                         <% if(loggedUser){ %>
-                            <li class="nav-item text-white list-unstyled ">
-                                Welcome <%= name %>
-                             </li>
+                        <li class="nav-item text-white list-unstyled ">
+                            Welcome <%= name %>
+                        </li>
                         <% } %>
-                        
                     </div>
+                </div>
             </div>
         </div>
     </nav>

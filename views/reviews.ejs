@@ -35,20 +35,22 @@
                 <% }) %>
                 <% } %>
             </div>
-            <form action="/reviews" method="POST" class='row'>
-                <div class='col-8'>
-                    <div class="my-2 d-flex align-items-center justify-content-center ">
-
-                        <input class="inputComments" placeholder="write a comment" name="comment" type="text"
-                            value='<%= edited? edited.comment : null %>' required />
-                            <input type="hidden" name="_id" value="<%= edited ? edited._id : null %>">
-                        <input type="submit" value='Send' class='sendButton px-2 mx-2'>
+            <form action="/reviews" method="POST">
+                <div class="row">
+                    <div class='col-sm-12 col-md-8'>
+                        <div class="my-2 d-flex align-items-center justify-content-center ">
+    
+                            <input class="inputComments" placeholder="write a comment" name="comment" type="text"
+                                value='<%= edited? edited.comment : null %>' required />
+                                <input type="hidden" name="_id" value="<%= edited ? edited._id : null %>">
+                            <input type="submit" value='Send' class='sendButton px-2 mx-2'>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <% if(error){ %>
-                        <small class='text-white bg-danger py-2 px-2 '><%= error %></small>
-                    <% } %>
+                    <div class="col-sm-12 col-md-4">
+                        <% if(error){ %>
+                            <small class='text-white bg-danger py-2 px-2 '><%= error %></small>
+                        <% } %>
+                    </div>
                 </div>
             </form>
         </div>
