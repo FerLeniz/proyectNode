@@ -1,14 +1,14 @@
 body {
   /* background: rgba(239,201,53,0.33) url("https://wallup.net/wp-content/uploads/2017/11/10/333568-simple-dark-simple_background-texture-black_background.jpg") repeat scroll 100% 0%; */
-  /* background: rgba(239,201,53,0.33) url("https://th.bing.com/th/id/R.e685c5bc18fbe931c26c5fd9875d4eac?rik=ECUh6P0os6Bt1g&riu=http%3a%2f%2fjornalismocolaborativo.com%2fwp-content%2fuploads%2f2014%2f06%2fbeer-texture.jpg&ehk=ih7IOsloTu16KI9o1xoNgorXmxBph8ECzYyd1TO4H3o%3d&risl=&pid=ImgRaw&r=0") repeat scroll 100% 0%; */
-  background: rgba(239,201,53,0.33) url("https://th.bing.com/th/id/R.756d9d73c3c0957e6252c2855a5aec66?rik=PRkaEiuKx4drtw&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-2%2fDark-Background-Desktop-Wallpaper-04527.jpg&ehk=%2flOsNRT%2f6QrbQVMNtxVDYGiSVHnl9zIUeJEYHqlDfiU%3d&risl=&pid=ImgRaw&r=0") repeat scroll 100% 0%;
+   background: rgba(239,201,53,0.33) url("https://th.bing.com/th/id/R.e685c5bc18fbe931c26c5fd9875d4eac?rik=ECUh6P0os6Bt1g&riu=http%3a%2f%2fjornalismocolaborativo.com%2fwp-content%2fuploads%2f2014%2f06%2fbeer-texture.jpg&ehk=ih7IOsloTu16KI9o1xoNgorXmxBph8ECzYyd1TO4H3o%3d&risl=&pid=ImgRaw&r=0") repeat scroll 100% 0%;
   /* font-family: 'Amatic SC', cursive; */
  font-family: 'Amatic SC', cursive;
  font-family: 'Permanent Marker', cursive;
 }
 
 .darkMode{
- background: rgba(239,201,53,0.33) url("https://wallup.net/wp-content/uploads/2017/11/10/333568-simple-dark-simple_background-texture-black_background.jpg") repeat scroll 100% 0%;  
+ /* background: rgba(239,201,53,0.33) url("https://wallup.net/wp-content/uploads/2017/11/10/333568-simple-dark-simple_background-texture-black_background.jpg") repeat scroll 100% 0%;   */
+ background: rgba(239,201,53,0.33) url("https://th.bing.com/th/id/R.756d9d73c3c0957e6252c2855a5aec66?rik=PRkaEiuKx4drtw&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-2%2fDark-Background-Desktop-Wallpaper-04527.jpg&ehk=%2flOsNRT%2f6QrbQVMNtxVDYGiSVHnl9zIUeJEYHqlDfiU%3d&risl=&pid=ImgRaw&r=0") repeat scroll 100% 0%;
  color: #FBB117;
 }
 
