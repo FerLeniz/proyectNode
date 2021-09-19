@@ -16,9 +16,9 @@ const userControllers = {
         })
     },
     signup: (req, res) => {
-        if(req.session.loggedUser){
-            res.redirect("/error")
-        }
+        // if(req.session.loggedUser){
+        //     res.redirect("/error")
+        // }
         res.render("signup", {
             title: "Sign Up",
             error: null,
