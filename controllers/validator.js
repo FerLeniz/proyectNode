@@ -5,7 +5,7 @@ const validator = (req, res, next) => {
         name: joi.string().trim().min(2).max(10).required().messages({
             "string.empty": "Empty name...",
         }),
-        age: joi.number().min(18).less(18).required(),
+        age: joi.number().min(18).required(),
         lastname: joi.string().trim().min(2).max(15).required(),
         email: joi.string().required().trim().email(),
         password: joi.string().trim().required().min(6).max(250).messages({
