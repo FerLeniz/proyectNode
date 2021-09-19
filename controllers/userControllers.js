@@ -3,7 +3,7 @@ const bcryptjs = require("bcryptjs")
 
 const userControllers = {
     signin: (req, res) => {
-        if(req.session.loggedUser){
+        if (req.session.loggedUser) {
             res.redirect("/error")
         }
         res.render("signin", {
@@ -16,9 +16,9 @@ const userControllers = {
         })
     },
     signup: (req, res) => {
-        // if(req.session.loggedUser){
-        //     res.redirect("/error")
-        // }
+        if (req.session.loggedUser) {
+            res.redirect("/error")
+        }
         res.render("signup", {
             title: "Sign Up",
             error: null,
@@ -28,7 +28,7 @@ const userControllers = {
             userId: req.session.userId
         })
     },
-    error404:(req,res)=>{
+    error404: (req, res) => {
         res.render("error", {
             title: "Error",
             error: null,
@@ -74,6 +74,10 @@ const userControllers = {
             res.render("signup", {
                 title: "Sign Up",
                 error: err,
+                loggedUser: req.session.loggedUser,
+                name: req.session.name,
+                age: req.session.age,
+                userId: req.session.userId
             })
         }
     },

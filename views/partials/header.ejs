@@ -1,3 +1,5 @@
+<% let variable= loggedUser? true : false %>
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
@@ -12,7 +14,7 @@
                             <li class="nav-item">
                                 <a class="nav-link <%= title.includes('Home')? 'active' : null %>" aria-current="page" href="/">Home</a>
                             </li>
-                            <% if (!loggedUser) { %>
+                            <% if (!variable) { %>
                             <li class="nav-item">
                                 <a class="nav-link <%= title.includes('In')? 'active' : null %>" href="/signin">Sign In</a>
                             </li>
