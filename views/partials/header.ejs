@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand">antares</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,13 +30,14 @@
                             
                         </ul>
                     </div>
-                    <div class='col-md-3 tetx-center'>
+                    <div class='col-md-3 tetx-center '>
+                        <div class='d-md-none d-lg-block'>                    
                         <% if(loggedUser){ %>
                             <li class="nav-item text-white list-unstyled ">
                                 Welcome <%= name %>
                              </li>
                         <% } %>
-                        
+                        </div>   
                     </div>
             </div>
         </div>
