@@ -5,12 +5,11 @@ const validator = (req, res, next) => {
         name: joi.string().trim().min(2).max(10).required().messages({
             "string.empty": "Empty name...",
         }),
-        age: joi.number(),
+        age: joi.number().less(18).min(18).required(),
         lastname: joi.string().trim().min(2).max(15).required(),
         email: joi.string().required().trim().email(),
         password: joi.string().trim().required().min(6).max(250).messages({
-            "string.empty": "Empty password, try again",
-            
+            "string.empty": "Empty password, try again",            
         }),
     });
 
@@ -21,6 +20,7 @@ const validator = (req, res, next) => {
         next();
     } else {
         console.log(validation.error.details)
+        console.log(validation)
         res.render("signup", {
             title: "Sign Up",
             error: validation.error.details,

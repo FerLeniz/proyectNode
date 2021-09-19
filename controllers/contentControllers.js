@@ -12,6 +12,10 @@ const contentControllers = {
         })
     },
     reviews: async (req, res) => {
+        if(!req.session.loggedUser){
+            res.redirect("/error")
+        }
+
         const comments = await Comment.find()
         res.render('reviews', {
             title: 'Reviews',
