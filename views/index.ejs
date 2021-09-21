@@ -11,6 +11,13 @@
         </button>
     </div>
 </div>
+<div class='position-fixed top-0 end-0 p-3' style="z-index: 11">
+    <div id="liveToast" class='toast hide <%= loggedUser ? "bg-success" : "bg-danger" %>' role="alert" aria-live="assertive" aria-atomic="true">
+        <div class='toast-body text-dark rounded  '>
+            <span class='text-white fs-5'> <%= loggedUser ? "You´re weolcome :D" : "You must be logged in!" %> </span>
+        </div>
+    </div>
+</div>
 <div class='d-flex justify-content-center'>
     <div id="carouselExampleCaptions" class="carousel slide w-75" data-bs-ride="carousel">
         <div class="carousel-indicators">
