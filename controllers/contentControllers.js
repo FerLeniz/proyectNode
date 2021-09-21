@@ -1,15 +1,35 @@
 const path = require('path')
 const Comment = require('../models/Comment')
+const ItemCarousel = require('../models/ItemCarousel')
 
 const contentControllers = {
-    home: (req, res) => {
+    home: async (req, res) => {
+        const itemsCarousel= await ItemCarousel.find()
+       
         res.render('index', {
             title: 'Home',
+            items:itemsCarousel,
             loggedUser: req.session.loggedUser,
             name: req.session.name,
             age: req.session.age,
             userId: req.session.userId
         })
+    },
+    admin: (req, res) => {
+        res.render('admin', {
+            title: 'Admin',
+            loggedUser: req.session.loggedUser,
+            name: req.session.name,
+            age: req.session.age,
+            userId: req.session.userId
+        })
+    },
+    addItemCarousel: async (req,res)=>{
+        const {photo,title,text} = req.body
+        let newItem= await new ItemCarousel({
+            title,photo,text
+        }).save()
+    //  console.log(req.body)
     },
     reviews: async (req, res) => {
         if(!req.session.loggedUser){

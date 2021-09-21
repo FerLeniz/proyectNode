@@ -6,6 +6,7 @@ const validator = require('../controllers/validator');
 
 router.route('/')
 .get(contentControllers.home)
+.post(contentControllers.addItemCarousel)
 
 router.route('/reviews')
 .get(contentControllers.reviews)
@@ -31,5 +32,9 @@ router.route('/logout')
 
 router.route('/error')
 .get(userControllers.error404)
+
+//Admin 
+router.route('/admin')
+.get(contentControllers.admin)
 
 module.exports = router
