@@ -29,7 +29,6 @@ const contentControllers = {
         let newItem= await new ItemCarousel({
             title,photo,text
         }).save()
-    //  console.log(req.body)
     },
     reviews: async (req, res) => {
         if(!req.session.loggedUser){

@@ -33,8 +33,4 @@ router.route('/logout')
 router.route('/error')
 .get(userControllers.error404)
 
-//Admin 
-router.route('/admin')
-.get(contentControllers.admin)
-
 module.exports = router
