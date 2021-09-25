@@ -6,7 +6,6 @@ const validator = require('../controllers/validator');
 
 router.route('/')
 .get(contentControllers.home)
-.post(contentControllers.addItemCarousel)
 
 router.route('/reviews')
 .get(contentControllers.reviews)
@@ -25,7 +24,7 @@ router.route('/signin')
 
 router.route('/signup')
 .get(userControllers.signup)
-.post(validator,userControllers.newUser)
+.post(userControllers.newUser)//validator,
 
 router.route('/logout')
 .get(userControllers.logOut)

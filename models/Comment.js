@@ -1,13 +1,26 @@
-const mongoose=require('mongoose')
+const Sequelize = require('sequelize')
+const database = require('../config/database')
 
-const commentSchema= new mongoose.Schema({
-    // titleBar: { type: "String", required: true },
-    //[{ userId:{type:mongoose.Types.ObjectId, ref:'user' }, comment: { type: String } }],
-    comment:{ type: String },
-    userId: { type: mongoose.Types.ObjectId, ref: "user" },
-    name:String,
-    age:Number
-})
+const Comment= database.define('comment',{
+    comment:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    // userId:{
+    //     type: Sequelize.INTEGER,
+    //     allowNull: true
+    // },
+    name:{
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    age:{
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+},{
+    timestamps: false
+  })
 
-const Comment=mongoose.model('comment',commentSchema)
+
 module.exports=Comment

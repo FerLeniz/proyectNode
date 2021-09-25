@@ -23,38 +23,46 @@
                         <h6 class="px-3"><%= comment.name %></h6>
                         <h6 class='px-2'><%= comment.age %></h6>
                         <% if(loggedUser && String(userId) == String(comment['userId'])){ %>
-                        <a href="/edit-comment/<%= comment._id %>" class='text-dark'><i
+                        <a href="/edit-comment/<%= comment.id %>" class='text-dark'><i
                                 class="fas fa-edit cursor px-2"></i></a>
-                        <a href="/delete-comment/<%= comment._id %> " class="text-dark"><i
+                        <a href="/delete-comment/<%= comment.id %> " class="text-dark"><i
                                 class="fas fa-trash-alt cursor"></i></a>
+                                
                         <% } %>
                     </div>
                     <p class='ms-4'><%= comment.comment %> </p>
-                    <input type="hidden">
+                    <% if(loggedUser && String(userId) == String(comment['userId']) && comment.id === edited.id ){ %>
+                    <form action="/reviews" method="POST">
+                        <input class="inputComments" placeholder="write a comment" name="comment" type="text"
+                            value='<%= edited? edited.comment : null %>' required />
+                        <input type="hidden" name="id" value="<%= edited ? edited.id : null %>">
+                        <input type="submit" value='Send' class='sendButton px-2 mx-2 my-1'>
+                    </form>
+                    <% } %>
                 </div>
                 <% }) %>
                 <% } %>
             </div>
-            <form action="/reviews" method="POST" >
+            <form action="/reviews" method="POST">
                 <div class="row">
                     <div class='col-sm-12 col-md-8'>
                         <div class="my-2 d-flex align-items-center justify-content-center flex-wrap ">
-    
+
                             <input class="inputComments" placeholder="write a comment" name="comment" type="text"
-                                value='<%= edited? edited.comment : null %>' required />
-                                <input type="hidden" name="_id" value="<%= edited ? edited._id : null %>">
+                                value='' required />
+                            <!-- <input type="hidden" name="id" value="<%= edited ? edited.id : null %>"> -->
                             <input type="submit" value='Send' class='sendButton px-2 mx-2 my-1'>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-4 text-center">
                         <% if(error){ %>
-                            <small class='text-white bg-danger py-2 px-2 '><%= error %></small>                            
+                        <small class='text-white bg-danger py-2 px-2 '><%= error %></small>
                         <% } %>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    
+
     <div></div>
     <%- include('partials/footer.ejs') %>

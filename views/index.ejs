@@ -1,7 +1,6 @@
 <%- include('partials/head.ejs') %>
 <%- include('partials/header.ejs') %>
 
-
 <h1 class="text-center mt-4">Welcome to Antares</h1>
 <div class='d-flex flex-row justify-content-center'>
     <h2 class="text-center">Give us your opinion !</h2>
@@ -17,7 +16,7 @@
 <div class='position-fixed top-0 end-0 p-3' style="z-index: 11">
     <div id="liveToast" class='toast hide <%= loggedUser ? "bg-success" : "bg-danger" %>' role="alert" aria-live="assertive" aria-atomic="true">
         <div class='toast-body text-dark rounded  '>
-            <span class='text-white fs-5'> <%= loggedUser ? "You´re weolcome :D" : "You must be logged in!" %> </span>
+            <span class='text-white fs-5'> <%= loggedUser ? "You´re welcome :D" : "You must be logged in!" %> </span>
         </div>
     </div>
 </div>

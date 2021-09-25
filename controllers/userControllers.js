@@ -40,11 +40,11 @@ const userControllers = {
     },
     newUser: async (req, res) => {
         const {name,lastname,age,email,password} = req.body
-           
         try {
-            const existenceUser = await User.findOne({email: email,})
-            if (existenceUser)throw new Error("email already in use!")
-            
+            const existenceUser = await User.findOne({where:{email: email}} )
+            if (existenceUser) {
+                throw new Error("email already in use!")
+            } else {
                 // const salt=bcryptjs.genSaltSync(10)
                 // const hash=bcryptjs.hashSync(password,salt)
                 const newUser = await new User({
@@ -56,11 +56,11 @@ const userControllers = {
                 })
                 await newUser.save()
                 req.session.loggedUser = true
-                req.session.userId = newUser._id
+                req.session.userId = newUser.id
                 req.session.name = newUser.name
                 req.session.age = newUser.age
-                res.redirect('/')
-            
+                return res.redirect("/")
+            }
         } catch (err) {
             res.render("signup", {
                 title: "Sign Up",
@@ -78,9 +78,7 @@ const userControllers = {
             password
         } = req.body
         try {
-            const existenceUser = await User.findOne({
-                email: email,
-            })
+            const existenceUser = await User.findOne({where:{email: email}})
             if (existenceUser && existenceUser.password === password) {
                 req.session.loggedUser = true
                 req.session.userId = existenceUser._id
