@@ -9,6 +9,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse row" id="navbarNav">
+<<<<<<< HEAD
                 <div class='col-md-9'>
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -38,11 +39,44 @@
                 </div>
                 <div class='col-md-3 text-center'>
                     <div class='d-md-none d-lg-block'>
+=======
+                    <div class='col-md-9'>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link <%= title.includes('Home')? 'active' : null %>" aria-current="page" href="/">Home</a>
+                            </li>
+                            <% if (!loggedUser) { %>
+                            <li class="nav-item">
+                                <a class="nav-link <%= title.includes('In')? 'active' : null %>" href="/signin">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link <%= title.includes('Up')? 'active' : null %>" href="/signup">Sign Up</a>
+                            </li>
+                            <% }else{ %>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= title.includes('Reviews')? 'active' : null %>" href="/reviews">Reviews</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link <%= title.includes('Out')? 'active' : null %>" href="/logout">Log out</a>
+                            </li>
+                            <%} %>
+                            <li class="nav-item mx-1">
+                                <button onclick='changeMode()' type="button" class="btn btn-warning bg-gradient">Dark Mode: <span id='statusButton'>Off</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='col-md-3 tetx-center '>
+                        <div class='d-md-none d-lg-block'>                    
+>>>>>>> 8560f5eebd566e523c6b687ea5ffd10ce9fdd1a6
                         <% if(loggedUser){ %>
                         <li class="nav-item text-white list-unstyled ">
                             Welcome <%= name %>
                         </li>
                         <% } %>
+<<<<<<< HEAD
+=======
+                        </div>   
+>>>>>>> 8560f5eebd566e523c6b687ea5ffd10ce9fdd1a6
                     </div>
                 </div>
             </div>

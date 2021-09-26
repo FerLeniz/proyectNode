@@ -39,18 +39,9 @@ const userControllers = {
         })
     },
     newUser: async (req, res) => {
-        const {
-            name,
-            lastname,
-            age,
-            email,
-            password
-        } = req.body
-
+        const {name,lastname,age,email,password} = req.body
         try {
-            const existenceUser = await User.findOne({
-                email: email,
-            })
+            const existenceUser = await User.findOne({where:{email: email}} )
             if (existenceUser) {
                 throw new Error("email already in use!")
             } else {
@@ -65,7 +56,7 @@ const userControllers = {
                 })
                 await newUser.save()
                 req.session.loggedUser = true
-                req.session.userId = newUser._id
+                req.session.userId = newUser.id
                 req.session.name = newUser.name
                 req.session.age = newUser.age
                 return res.redirect("/")
@@ -87,9 +78,7 @@ const userControllers = {
             password
         } = req.body
         try {
-            const existenceUser = await User.findOne({
-                email: email,
-            })
+            const existenceUser = await User.findOne({where:{email: email}})
             if (existenceUser && existenceUser.password === password) {
                 req.session.loggedUser = true
                 req.session.userId = existenceUser._id

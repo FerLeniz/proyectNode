@@ -1,7 +1,7 @@
 :root {
   --text-color: hsla(210, 50%, 85%, 1);
   --shadow-color: hsla(210, 40%, 52%, .4);
-    /* --btn-color: hsl(210, 80%, 42%); */
+  /* --btn-color: hsl(210, 80%, 42%); */
   --btn-color: #FBB117;
   --bg-color: #141218;
 }
@@ -117,9 +117,14 @@ body {
  color: #FBB117;
 }
 
-.texto {
-  background-color: yellow
+.darkMode{
+  background: rgba(239,201,53,0.33) url("https://wallup.net/wp-content/uploads/2017/11/10/333568-simple-dark-simple_background-texture-black_background.jpg") repeat scroll 100% 0%;  
+  color: #FBB117;
 }
+
+/* .texto {
+  color: #FBB117; 
+} */
 
 .photo {
   width: 80vw;

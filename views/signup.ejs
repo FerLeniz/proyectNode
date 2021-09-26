@@ -23,7 +23,7 @@
                     <input type="password" class=" fs-4 rounded-pill shadow border border-light noOtuline my-2"
                         placeholder="Password" name="password" required />
                     <div class="d-flex justify-content-center mt-2">
-                        <input type="submit" value='Sign Up' class='viewMore rounded-pill w-25 fs-4 text-center py-2 '>
+                        <input type="submit" value='Sign Up' class='viewMore rounded-pill w-25 fs-5 text-center py-2 '>
                     </div>
                 </form>
     
@@ -33,13 +33,12 @@
     <div class='col-sm-12 col-md-5 d-flex justify-content-center align-items-start flex-column'>
         <div class="my-2 text-center">
             <% if(error) { %>
-                <% error.forEach(err=>{ %>
+                <% error.forEach(err => { %>
                      <p class='text-white bg-danger rounded '>- <%= err.message %> </p>
                  <% }) %>
-                 <% console.log('antes del error ') %>
-                 <% console.log(error[0].message) %>
-             <% } %>
+            <% } %> 
         </div>
     </div>    
 </div>
 <%- include('partials/footer.ejs') %>
+
