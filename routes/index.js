@@ -24,7 +24,7 @@ router.route('/signin')
 
 router.route('/signup')
 .get(userControllers.signup)
-.post(userControllers.newUser)//validator,
+.post(validator,userControllers.newUser)
 
 router.route('/logout')
 .get(userControllers.logOut)

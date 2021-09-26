@@ -109,7 +109,7 @@ const contentControllers = {
             })
         }
 
-    }
+    },
 }
 
 module.exports = contentControllers

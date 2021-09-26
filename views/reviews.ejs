@@ -20,8 +20,8 @@
                 <% comments.forEach(comment =>{ %>
                 <div class=" mt-2 titleImg rounded-pill  py-1 shadow">
                     <div class='d-flex flex-row px-2'>
-                        <h6 class="px-3"><%= comment.name %></h6>
-                        <h6 class='px-2'><%= comment.age %></h6>
+                        <h6 class="px-3 text-dark"><%= comment.name %></h6>
+                        <h6 class='px-2 text-dark'><%= comment.age %></h6>
                         <% if(loggedUser && String(userId) == String(comment['userId'])){ %>
                         <a href="/edit-comment/<%= comment.id %>" class='text-dark'><i
                                 class="fas fa-edit cursor px-2"></i></a>
@@ -30,7 +30,7 @@
                                 
                         <% } %>
                     </div>
-                    <p class='ms-4'><%= comment.comment %> </p>
+                    <p class='ms-4 text-dark'><%= comment.comment %> </p>
                     <% if(loggedUser && String(userId) == String(comment['userId']) && comment.id === edited.id ){ %>
                     <form action="/reviews" method="POST">
                         <input class="inputComments" placeholder="write a comment" name="comment" type="text"

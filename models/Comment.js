@@ -6,10 +6,6 @@ const Comment= database.define('comment',{
         type: Sequelize.STRING,
         allowNull: false
     },
-    // userId:{
-    //     type: Sequelize.INTEGER,
-    //     allowNull: true
-    // },
     name:{
         type: Sequelize.STRING,
         allowNull: true
