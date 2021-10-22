@@ -1,7 +1,7 @@
 <h1>🍺 Antares web</h1>
 <h5>CRUD hecho con Node.js y utilizando el motor de plantilla EJS, es una herramienta que nos permite escribir marcado HTML.</h5>
 
-<img src="https://user-images.githubusercontent.com/85353985/138366588-fd380eef-c312-4956-b3c9-c8d97e11c6b0.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/85353985/138366588-fd380eef-c312-4956-b3c9-c8d97e11c6b0.png" width=60% height=60%>
 
 <p>Podés ver la web en el siguiente enlace :</p>
 https://nodeproyectalone.herokuapp.com/
