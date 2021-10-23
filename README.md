@@ -3,11 +3,11 @@
 
 <img src="https://user-images.githubusercontent.com/85353985/138366588-fd380eef-c312-4956-b3c9-c8d97e11c6b0.png" width=60% height=60%>
 
-<h1>🔑Forma de acceso</h1>
+<h2>🔑Forma de acceso</h2>
 <p>Podés ver la web en el siguiente enlace :</p>
 https://nodeproyectalone.herokuapp.com/
 
-<h1>🔨 Trabajo realizado con:</h1>
+<h2>🔨 Trabajo realizado con:</h2>
 
 <ul>
   <li>Node.js</li>
@@ -17,7 +17,7 @@ https://nodeproyectalone.herokuapp.com/
   <li>mongoose</li>
 </ul>
 
-<h1>👏 Agradecimientos:</h1>
+<h2>👏 Agradecimientos:</h2>
 <ul>
   <li>A Fernando Biaus por la excelente mentoria y clases dinamicas.</li>
   <li>A MindHub por la contención y seguimiento continuo.</li>
